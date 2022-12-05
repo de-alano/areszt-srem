@@ -11,20 +11,85 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <header id="header">
-        <nav class="links" style="--items: 6;">
-            <a href="/"">Start</a>
-            <a href=" opis-techniczny.html" class="active">Opis techniczny</a>
-            <a href="pomysly.html">Pomysły</a>
-            <a href="o-areszcie.html">O areszcie</a>
-            <a href="o-sremie.html">O Śremie</a>
-            <a href="kontakt.html">Kontakt</a>
-            <span class="line"></span>
+<body class="page-contact">
+    <header class="header">
+        <div class="header__hamburger">
+            <span class="header__hamburger-line header__hamburger-line--1"></span>
+            <span class="header__hamburger-line header__hamburger-line--2"></span>
+            <span class="header__hamburger-line header__hamburger-line--3"></span>
+        </div>
+
+        <nav class="mobile-navigation">
+            <a class="mobile-navigation__link" href="index.html">Start</a>
+            <a class="mobile-navigation__link" href=" opis-techniczny.html">Opis techniczny</a>
+            <a class="mobile-navigation__link" href="pomysly.html">Pomysły</a>
+            <a class="mobile-navigation__link" href="o-areszcie.html">O areszcie</a>
+            <a class="mobile-navigation__link" href="o-sremie.html">O Śremie</a>
+            <a class="mobile-navigation__link active" href="kontakt.html">Kontakt</a>
+
+            <a href="https://karlak.com.pl/" target="_blank"> <img src="images/karlak-logo.png" alt="" class="logo"></a>
+        </nav>
+
+        <nav class="navigation" style="--items: 6;">
+            <a class="navigation__link" href="index.html">Start</a>
+            <a class="navigation__link" href=" opis-techniczny.html">Opis techniczny</a>
+            <a class="navigation__link" href="pomysly.html">Pomysły</a>
+            <a class="navigation__link" href="o-areszcie.html">O areszcie</a>
+            <a class="navigation__link" href="o-sremie.html">O Śremie</a>
+            <a class="navigation__link active" href="kontakt.html">Kontakt</a>
+            <span class="navigation__line"></span>
         </nav>
     </header>
-    <h1>Kontakt</h1>
+    <div class="container">
+        <div class="wrapper">
+            <h1 class="page-title">Kontakt</h1>
+            <div class="contact-card">
+                <div class="content">
+                    <div class="card">
+                        <div class="info"><img src="../dist/images/contact-img.jpg" />
+                            <div class="profileinfo">
+                                <h3>Andrzej Karlak</h3>
+                                <p class="bio">Bio text placeholder .....</p>
+                                <div class="contact-options">
+                                    <div class="contact-option">
+                                        <img src="/dist/images/icons/place.png" alt="" class="contact-option-icon">
+                                        <div class="contact-option-text">
+                                            <p>FHU ANGO Małgorzata Karlak
+                                            </p>
+                                            <p>63-100 Śrem,
+                                            </p>
+                                            <p>Gierymskiego 61</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-option one-line">
+                                        <img src="/dist/images/icons/phone.png" alt="" class="contact-option-icon">
+                                        <div class="contact-option-text">
+                                            <p>602290279</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-option one-line">
+                                        <img src="/dist/images/icons/mail.png" alt="" class="contact-option-icon">
+                                        <div class="contact-option-text">
+                                            <p>andrzej@karlak.pro</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-option one-line">
+                                        <img src="/dist/images/icons/world-wide-web.png" alt=""
+                                            class="contact-option-icon">
+                                        <div class="contact-option-text">
+                                            <a href="https://karlak.com.pl" target="_blank">www.karlak.com.pl</a>
 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

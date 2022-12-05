@@ -8,19 +8,57 @@
     <title>Areszt Śrem</title>
 
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Montserrat:200,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .pswp__caption__center {
+            text-align: center;
+        }
+
+        figure {
+            display: inline-block;
+            width: 33.333%;
+            float: left;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .spacer {
+            height: 5em;
+        }
+    </style>
 </head>
 
 <body class="page-about-arest">
-    <header id="header">
-        <nav class="links" style="--items: 6;">
-            <a href="index.html"">Start</a>
-            <a href=" opis-techniczny.html">Opis techniczny</a>
-            <a href="pomysly.html">Pomysły</a>
-            <a href="o-areszcie.html" class="active">O areszcie</a>
-            <a href="o-sremie.html">O Śremie</a>
-            <a href="kontakt.html">Kontakt</a>
-            <span class="line"></span>
+    <header class="header">
+        <div class="header__hamburger">
+            <span class="header__hamburger-line header__hamburger-line--1"></span>
+            <span class="header__hamburger-line header__hamburger-line--2"></span>
+            <span class="header__hamburger-line header__hamburger-line--3"></span>
+        </div>
+
+        <nav class="mobile-navigation">
+            <a class="mobile-navigation__link" href="index.html">Start</a>
+            <a class="mobile-navigation__link" href=" opis-techniczny.html">Opis techniczny</a>
+            <a class="mobile-navigation__link" href="pomysly.html">Pomysły</a>
+            <a class="mobile-navigation__link active" href="o-areszcie.html">O areszcie</a>
+            <a class="mobile-navigation__link" href="o-sremie.html">O Śremie</a>
+            <a class="mobile-navigation__link" href="kontakt.html">Kontakt</a>
+
+            <a href="https://karlak.com.pl/" target="_blank"> <img src="images/karlak-logo.png" alt="" class="logo"></a>
+        </nav>
+
+        <nav class="navigation" style="--items: 6;">
+            <a class="navigation__link" href="index.html">Start</a>
+            <a class="navigation__link" href=" opis-techniczny.html">Opis techniczny</a>
+            <a class="navigation__link" href="pomysly.html">Pomysły</a>
+            <a class="navigation__link active" href="o-areszcie.html">O areszcie</a>
+            <a class="navigation__link" href="o-sremie.html">O Śremie</a>
+            <a class="navigation__link" href="kontakt.html">Kontakt</a>
+            <span class="navigation__line"></span>
         </nav>
     </header>
     <div class="container">
@@ -55,8 +93,8 @@
                 </p>
             </div>
         </div>
-    </div>
 
+        <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -37,16 +37,28 @@ const init = (() => {
                 prevEl: '.swiper-button-prev',
             },
         })
-
-        // Add swiper to cta button -> scroll to contact section
-        document.querySelector('.hero__btn').addEventListener('click', (e) => {
-            e.preventDefault();
-            mySwiper.slideTo(5, 1500); // 5 - contact section
-        })
     };
 
     // Keep an eye on viewport size changes
     breakpoint.addListener(breakpointChecker);
     // Kickstart
     breakpointChecker();
+
+    // HAMBURGER MENU
+    const menuIcon = document.querySelector('.header__hamburger');
+    const nav = document.querySelector('.mobile-navigation');
+    const navLinks = [...document.querySelectorAll('.mobile-navigation__link')];
+
+    menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('change');
+        nav.classList.toggle('change');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('change');
+            menuIcon.classList.remove('change');
+        });
+    });
+
 })();
