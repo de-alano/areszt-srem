@@ -4,11 +4,17 @@
 // Pages
 @import 'pages/ideas';
 @import 'pages/technical-description';
+@import 'pages/contact';
+
+// Components
+@import 'components/loader';
+@import 'components/header';
+@import 'components/gallery';
 
 body {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    // height: 100vh;
+    // width: 100vw;
+    // overflow: hidden;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -21,115 +27,6 @@ body {
     // height: 100vh;
     filter: grayscale(0.7);
     z-index: -1;
-}
-
-
-.links>a.active {
-    color: $color-primary;
-}
-
-
-.links {
-    background-color: rgba($color-secondary, .9); // background-image: linear-gradient(to bottom, #0003, transparent);
-    border-bottom: 1px solid $color-secondary;
-    box-shadow: 0 0 32px $color-secondary;
-    font-size: 2em;
-    font-weight: 300;
-}
-
-
-
-.links>a {
-    color: $color-gray-3;
-    padding: .75em;
-    text-align: center;
-    text-decoration: none;
-    transition: all .5s;
-    font-size: 16px;
-}
-
-.links>a:hover {
-    background: #ffffff06;
-    color: $color-primary;
-}
-
-.links>.line {
-    background: $color-primary;
-    height: 1px;
-    pointer-events: none;
-}
-
-/* The Magic */
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99999;
-}
-
-.links {
-    display: grid;
-    grid-template-columns: repeat(var(--items), 1fr);
-    position: relative;
-}
-
-.links>.line {
-    opacity: 0;
-    transition: all .5s;
-    position: absolute;
-    bottom: 0;
-    left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
-    width: var(--width, calc(100% / var(--items)));
-    --index: 0;
-}
-
-.links>a:hover~.line {
-    opacity: 1;
-}
-
-.links>a:nth-of-type(1):hover~.line {
-    --index: 1;
-}
-
-.links>a:nth-of-type(2):hover~.line {
-    --index: 2;
-}
-
-.links>a:nth-of-type(3):hover~.line {
-    --index: 3;
-}
-
-.links>a:nth-of-type(4):hover~.line {
-    --index: 4;
-}
-
-.links>a:nth-of-type(5):hover~.line {
-    --index: 5;
-}
-
-.links>a:nth-of-type(6):hover~.line {
-    --index: 6;
-}
-
-.links>a:nth-of-type(7):hover~.line {
-    --index: 7;
-}
-
-.links>a:nth-of-type(8):hover~.line {
-    --index: 8;
-}
-
-.links>a:nth-of-type(9):hover~.line {
-    --index: 9;
-}
-
-.links>a:nth-of-type(10):hover~.line {
-    --index: 10;
-}
-
-.links>a:last-of-type:hover~.line {
-    --index: var(--items);
 }
 
 .logo {
@@ -259,97 +156,6 @@ a {
     color: #2D3142;
 }
 
-.navigation {
-    width: 100%;
-    height: 100vh;
-    background: radial-gradient(circle, rgba(38, 49, 55, 1) 40%, rgba(60, 73, 79, 1) 100%);
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(100%);
-    transition: transform .8s cubic-bezier(1, 0, 0, 1);
-    // z-index: 15;
-
-    &__list {
-        text-align: center;
-    }
-
-    &__item {
-        list-style: none;
-
-        &:not(:last-child) {
-            margin-bottom: 4rem;
-        }
-    }
-
-    &__link {
-        text-decoration: none;
-        font-size: 2.5rem;
-        color: $color-secondary;
-        font-weight: 200;
-        font-family: $font-secondary;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        position: relative;
-        padding: .8rem 0;
-        transition: color .5s;
-
-        // @media only screen and (max-width: $bp-900) {
-        //     font-size: 2.2rem;
-        // }
-
-        // @media only screen and (max-width: $bp-600) {
-        //     font-size: 2rem;
-        // }
-
-        // @media only screen and (max-width: $bp-400) {
-        //     font-size: 1.8rem;
-        // }
-
-
-        &::before,
-        &::after {
-            content: '';
-            width: 100%;
-            height: 2px;
-            position: absolute;
-            left: 0;
-            transform: scaleX(0);
-            transition: transform .5s;
-            background-color: $color-primary;
-
-        }
-
-        &::after {
-            bottom: 0;
-            transform-origin: right;
-            // background-image: linear-gradient(to right, $color-tertiary, $color-primary);
-        }
-
-        &::before {
-            top: 0;
-            transform-origin: left;
-            // background-image: linear-gradient(to left, $color-tertiary, $color-primary);
-        }
-
-        &:hover {
-            color: $color-white;
-        }
-
-        &:hover::before,
-        &:hover::after {
-            transform: scaleX(1);
-        }
-    }
-}
-
-.navigation.change {
-    transform: translateX(0);
-}
-
 .swiper-container {
     width: 100%;
     height: 100vh;
@@ -374,7 +180,7 @@ a {
         position: relative;
 
         @media only screen and (max-width: $bp-900) {
-            height: 100vh;
+            height: auto;
             // scroll-snap-align: start;
         }
     }

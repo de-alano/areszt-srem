@@ -27,14 +27,35 @@ body {
 .page-title {
     font-family: $font-primary;
     font-size: 40px;
-    margin-bottom: 30px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid $color-primary;
     color: $color-secondary;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title:before,
+.page-title:after {
+    background-color: $color-primary;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.page-title:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.page-title:after {
+    left: 0.5em;
+    margin-right: -50%;
 }
 
 h2 {
-    font-family: $font-primary;
+    font-family: $font-secondary;
     font-size: 30px;
     margin-bottom: 15px;
     color: $color-secondary;

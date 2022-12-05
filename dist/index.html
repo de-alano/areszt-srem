@@ -12,34 +12,36 @@
 </head>
 
 <body>
-    <!-- <header class="header"></header>
-    <main class="main">
-        <div class="container">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nemo?</h1>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, magnam.</h2>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, maiores.</h3>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, a.</h4>
-            <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, praesentium.</h5>
-            <h6>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, doloremque.</h6>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nostrum sequi tempora, placeat eos
-                vero
-                doloremque, eum eligendi aut assumenda amet, reiciendis quos ad! In laudantium ut blanditiis expedita
-                obcaecati! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel error eius blanditiis magni
-                beatae,
-                quod atque quidem officiis in nam officia assumenda nemo sint natus dolor laborum dolore. Laborum,
-                distinctio?</p>
-        </div>
-    </main> -->
+    <div class="loader">
+        <img src="./images/icons/bars.svg" alt="Loader Icon">
+    </div>
 
-    <header id="header">
-        <nav class="links" style="--items: 6;">
-            <a href="/" class="active">Start</a>
-            <a href="opis-techniczny.html">Opis techniczny</a>
-            <a href="pomysly.html">Pomysły</a>
-            <a href="o-areszcie.html">O areszcie</a>
-            <a href="o-sremie.html">O Śremie</a>
-            <a href="kontakt.html">Kontakt</a>
-            <span class="line"></span>
+    <header class="header">
+        <div class="header__hamburger">
+            <span class="header__hamburger-line header__hamburger-line--1"></span>
+            <span class="header__hamburger-line header__hamburger-line--2"></span>
+            <span class="header__hamburger-line header__hamburger-line--3"></span>
+        </div>
+
+        <nav class="mobile-navigation">
+            <a class="mobile-navigation__link active" href="index.html">Start</a>
+            <a class="mobile-navigation__link" href=" opis-techniczny.html">Opis techniczny</a>
+            <a class="mobile-navigation__link" href="pomysly.html">Pomysły</a>
+            <a class="mobile-navigation__link" href="o-areszcie.html">O areszcie</a>
+            <a class="mobile-navigation__link" href="o-sremie.html">O Śremie</a>
+            <a class="mobile-navigation__link" href="kontakt.html">Kontakt</a>
+
+            <a href="https://karlak.com.pl/" target="_blank"> <img src="images/karlak-logo.png" alt="" class="logo"></a>
+        </nav>
+
+        <nav class="navigation" style="--items: 6;">
+            <a class="navigation__link active" href="index.html">Start</a>
+            <a class="navigation__link" href=" opis-techniczny.html">Opis techniczny</a>
+            <a class="navigation__link" href="pomysly.html">Pomysły</a>
+            <a class="navigation__link" href="o-areszcie.html">O areszcie</a>
+            <a class="navigation__link" href="o-sremie.html">O Śremie</a>
+            <a class="navigation__link" href="kontakt.html">Kontakt</a>
+            <span class="navigation__line"></span>
         </nav>
     </header>
 
@@ -62,7 +64,8 @@
     <video autoplay muted loop id="myVideo">
         <source src="images/areszt-v1.mp4" type="video/mp4">
     </video>
-
+    <script src="js/main.js"></script>
+    <script src="js/loader.js"></script>
 </body>
 
 </html>

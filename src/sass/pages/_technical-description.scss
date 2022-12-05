@@ -1,12 +1,28 @@
 .page-technical-description {
     .container {
-        margin-right: 250px;
+        margin-right: 0;
+
+        @media (min-width: $bp-900) {
+            margin-right: 250px;
+        }
     }
 
-    .technical-description-image {
-        img {
-            height: 400px;
-            width: auto;
+    .technical-description {
+        &__image {
+            img {
+                // height: 400px;
+                width: auto;
+                max-width: 100%;
+                max-height: 50vh;
+            }
+        }
+
+        &__text {
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            color: $color-gray-1;
         }
     }
 }
