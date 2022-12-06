@@ -3,6 +3,7 @@
 
 // Pages
 @import 'pages/ideas';
+@import 'pages/main-page';
 @import 'pages/technical-description';
 @import 'pages/contact';
 
@@ -10,151 +11,61 @@
 @import 'components/loader';
 @import 'components/header';
 @import 'components/gallery';
+@import 'components/video';
 
 body {
     // height: 100vh;
     // width: 100vw;
-    // overflow: hidden;
-}
-
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: auto;
-    // height: 100vh;
-    filter: grayscale(0.7);
-    z-index: -1;
+    overflow-x: hidden;
 }
 
 .logo {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
-    width: 100px;
+    width: 80px;
     height: auto;
-}
+    bottom: 15px;
+    right: 15px;
 
-.text {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    color: #fff;
-    width: 500px;
-    background-color: rgba($color-secondary, .7);
-    padding: 15px 20px;
-}
-
-.text-heading {
-    margin-bottom: 15px;
-    color: $color-primary;
-}
-
-.text-paragraph {
-    margin-bottom: 20px;
-}
-
-.typewriter h1 {
-    color: #fff;
-    font-family: monospace;
-    overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange;
-    /* The typwriter cursor */
-    white-space: nowrap;
-    /* Keeps the content on a single line */
-    // margin: 0 auto;
-    /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em;
-    /* Adjust as needed */
-    animation:
-        typing 4s steps(30, end) infinite,
-        blink-caret .5s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
+    @media (min-width: $bp-900) {
+        bottom: 30px;
+        right: 30px;
+        width: 100px;
     }
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 34px;
 
-    from,
-    to {
-        border-color: transparent
+    @media (min-width: $bp-900) {
+        flex-direction: row;
     }
 
-    50% {
-        border-color: orange
+    .box-left {
+        width: 100%;
+
+        @media (min-width: $bp-900) {
+            width: 50%;
+            margin-right: 20px;
+        }
+    }
+
+    .box-right {
+        width: 100%;
+
+        @media (min-width: $bp-900) {
+            width: 50%;
+            margin-left: 20px;
+        }
+    }
+
+    .text {
+        text-align: justify;
+        // background-color: $color-gray-3;
     }
 }
 
-.button {
-    display: inline-flex;
-    height: 40px;
-    width: 150px;
-    border: 2px solid #BFC0C0;
-    // margin: 20px 20px 20px 20px;
-    color: #BFC0C0;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: .8em;
-    letter-spacing: 1.5px;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-a {
-    color: #BFC0C0;
-    text-decoration: none;
-    letter-spacing: 1px;
-}
-
-#button-3 {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-#button-3 a {
-    position: relative;
-    transition: all .45s ease-Out;
-}
-
-#circle {
-    width: 0%;
-    height: 0%;
-    opacity: 0;
-    line-height: 40px;
-    border-radius: 50%;
-    background: $color-primary;
-    position: absolute;
-    transition: all .5s ease-Out;
-    top: 20px;
-    left: 70px;
-}
-
-#button-3:hover #circle {
-    width: 200%;
-    height: 500%;
-    opacity: 1;
-    top: -70px;
-    left: -70px;
-}
-
-#button-3:hover a {
-    color: #2D3142;
-}
 
 .swiper-container {
     width: 100%;

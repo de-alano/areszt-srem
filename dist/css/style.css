@@ -219,6 +219,103 @@ p {
       .page-ideas .ideas-graphic #hexGrid {
         font-size: 13px; } }
 
+.page-main {
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("./../../../dist/images/bg-home.jpg");
+  background-size: cover;
+  background-position: center;
+  /* The typing effect */
+  /* The typewriter cursor effect */ }
+  .page-main .video {
+    display: none; }
+    @media (min-width: 56.25em) {
+      .page-main .video {
+        display: block;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: auto;
+        filter: grayscale(0.7);
+        z-index: -1; } }
+  .page-main .text-box {
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    width: 100%;
+    background-color: rgba(47, 54, 64, 0.7);
+    padding: 15px 20px; }
+    .page-main .text-box__heading {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #ffffff;
+      font-family: "Fira Sans", sans-serif, monospace;
+      overflow: hidden;
+      border-right: .15em solid orange;
+      white-space: nowrap;
+      letter-spacing: .15em;
+      animation: typing 3s steps(30, end), blink-caret 0.5s step-end; }
+    .page-main .text-box__paragraph {
+      margin-bottom: 20px;
+      font-size: 14px; }
+    .page-main .text-box__cta {
+      display: inline-flex;
+      height: 30px;
+      width: 100px;
+      border: 2px solid #BFC0C0;
+      color: #BFC0C0;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 1.4rem;
+      letter-spacing: 1.5px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer; }
+      .page-main .text-box__cta a {
+        color: #BFC0C0;
+        text-decoration: none;
+        letter-spacing: 1px;
+        position: relative;
+        transition: all .45s ease-Out; }
+      .page-main .text-box__cta .circle {
+        width: 0%;
+        height: 0%;
+        opacity: 0;
+        line-height: 30px;
+        border-radius: 50%;
+        background: #ffa502;
+        position: absolute;
+        transition: all .5s ease-Out;
+        top: 15px;
+        left: 50px; }
+      .page-main .text-box__cta:hover .circle {
+        width: 200%;
+        height: 500%;
+        opacity: 1;
+        top: -70px;
+        left: -70px; }
+      .page-main .text-box__cta:hover a {
+        color: #2D3142; }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; }
+  50% {
+    border-color: orange; } }
+
 .page-technical-description .container {
   margin-right: 0; }
   @media (min-width: 56.25em) {
@@ -662,117 +759,42 @@ p {
 .show-front {
   transform: none; }
 
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: auto;
-  filter: grayscale(0.7);
-  z-index: -1; }
+body {
+  overflow-x: hidden; }
 
 .logo {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
-  width: 100px;
-  height: auto; }
+  width: 80px;
+  height: auto;
+  bottom: 15px;
+  right: 15px; }
+  @media (min-width: 56.25em) {
+    .logo {
+      bottom: 30px;
+      right: 30px;
+      width: 100px; } }
 
-.text {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  color: #fff;
-  width: 500px;
-  background-color: rgba(47, 54, 64, 0.7);
-  padding: 15px 20px; }
-
-.text-heading {
-  margin-bottom: 15px;
-  color: #ffa502; }
-
-.text-paragraph {
-  margin-bottom: 20px; }
-
-.typewriter h1 {
-  color: #fff;
-  font-family: monospace;
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em;
-  /* Adjust as needed */
-  animation: typing 4s steps(30, end) infinite, blink-caret 0.5s step-end infinite; }
-
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0; }
-  to {
-    width: 100%; } }
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent; }
-  50% {
-    border-color: orange; } }
-
-.button {
-  display: inline-flex;
-  height: 40px;
-  width: 150px;
-  border: 2px solid #BFC0C0;
-  color: #BFC0C0;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: .8em;
-  letter-spacing: 1.5px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; }
-
-a {
-  color: #BFC0C0;
-  text-decoration: none;
-  letter-spacing: 1px; }
-
-#button-3 {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer; }
-
-#button-3 a {
-  position: relative;
-  transition: all .45s ease-Out; }
-
-#circle {
-  width: 0%;
-  height: 0%;
-  opacity: 0;
-  line-height: 40px;
-  border-radius: 50%;
-  background: #ffa502;
-  position: absolute;
-  transition: all .5s ease-Out;
-  top: 20px;
-  left: 70px; }
-
-#button-3:hover #circle {
-  width: 200%;
-  height: 500%;
-  opacity: 1;
-  top: -70px;
-  left: -70px; }
-
-#button-3:hover a {
-  color: #2D3142; }
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 34px; }
+  @media (min-width: 56.25em) {
+    .row {
+      flex-direction: row; } }
+  .row .box-left {
+    width: 100%; }
+    @media (min-width: 56.25em) {
+      .row .box-left {
+        width: 50%;
+        margin-right: 20px; } }
+  .row .box-right {
+    width: 100%; }
+    @media (min-width: 56.25em) {
+      .row .box-right {
+        width: 50%;
+        margin-left: 20px; } }
+  .row .text {
+    text-align: justify; }
 
 .swiper-container {
   width: 100%;
