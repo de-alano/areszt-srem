@@ -16,6 +16,15 @@
             text-align: center;
         }
 
+        .pswp__caption--fake,
+        .pswp__caption {
+            display: none;
+        }
+
+        .pswp {
+            z-index: 999999;
+        }
+
         figure {
             display: inline-block;
             width: 33.333%;
@@ -28,6 +37,46 @@
 
         .spacer {
             height: 5em;
+        }
+
+        .gallery {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-auto-rows: 240px;
+            padding: 20px;
+            background-color: #dfe6e9;
+        }
+
+        .gallery figure {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #353535;
+            font-size: 3rem;
+            color: #fff;
+            box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+            height: 100%;
+            width: 100%;
+            border-radius: 4px;
+            transition: all 500ms;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 0;
+            margin: 0;
+        }
+
+        @media screen and (min-width: 600px) {
+            .tall {
+                grid-row: span 2 / auto;
+            }
+
+            .wide {
+                grid-column: span 2 / auto;
+            }
         }
     </style>
 </head>
@@ -65,36 +114,233 @@
         <div class="wrapper">
             <h1 class="page-title">O areszcie</h1>
             <div class="page-description">
-                <p>Chciałbym w kilku słowach o byłym już Areszcie, ale w kilku słowach się nie da ;), natomiast obiecuję
-                    skrócić najbardziej jak się jednak da ;).
-                </p>
-                <p>Budynek byłego już Aresztu Śledczego w Śremie powstał w drugiej połowie XIX wieku. W dokumentach
-                    archiwalnych pojawia się wzmianka, że prace budowlane najprawdopodobniej zakończono w 1869 roku. Od
-                    tego okresu zaczęła się historia aresztu, który w początkowej fazie realizował potrzeby pruskiego
-                    sądu powiatowego. Następnie Naczelna Rada Ludowa przejęła więzienie po powstaniu wielkopolskim,
-                    później w roku 1921 budynek trafił w ręce Ministerstwa Sprawiedliwości. Jednostka stała się
-                    więzieniem przy sądzie powiatowym, gdzie przebywali skazani z karami wymierzonymi do 6 miesięcy. Od
-                    1 stycznia 1929 roku nadzór nad aresztem sprawował kierownik sądu grodzkiego. W czasie II Wojny
-                    Światowej budynek był miejscem represji wobec mieszkańców Śremu, których część została stracona 20
-                    października 1939 roku. o zakończeniu działań wojennych jednostka znalazła się w dyspozycji
-                    Ministerstwa Bezpieczeństwa Publicznego jako więzienie karno-śledcze, a od 8 grudnia 1954
-                    przyporządkowano Ministerstwu Spraw Wewnętrznych. Po niespełna 2 latach kuratelę przejęło ponownie
-                    Ministerstwo Sprawiedliwości.
-                </p>
-                <p>Budynek przez ponad 100 lat posiadał prostą architekturę ceglana. lecz w końcówce ubiegłego wieku,
-                    podczas gruntownego remontu został podwyższony o kondygnację, jednocześnie tracąc swój zabytkowy
-                    charakter. Kolejne lata to również liczne modernizacje, tak, aby budynek spełniał wymogi na pobyt
-                    skazanych. Cele wyposażone są w ciepłą wodę oraz własne kąciki sanitarne, co ma przełożenie na
-                    pozytywną opinię Sanepidu.
-                </p>
-                <p>W ostatnich latach więzienie funkcjonowało bardziej jako areszt śledczy, skazani wykonywali liczne,
-                    nieodpłatne prace na rzecz miasta. 31 marca 2018 Areszt Śledczy przestał istnieć po decyzji ministra
-                    Zbigniewa Ziobry.
-                </p>
+                <div class="row">
+                    <div class="box-left text">
+                        <p>Chciałbym w kilku słowach napisać o byłym już Areszcie, ale w kilku słowach się nie da,
+                            natomiast obiecuję skrócić najbardziej jak się jednak da.
+                        </p>
+                        <p>Budynek byłego już Aresztu Śledczego w Śremie powstał w drugiej połowie XIX wieku. W
+                            dokumentach archiwalnych pojawia się wzmianka, że prace budowlane najprawdopodobniej
+                            zakończono w 1869 roku. Od tego okresu zaczęła się historia aresztu, który w początkowej
+                            fazie realizował potrzeby pruskiego sądu powiatowego. Następnie Naczelna Rada Ludowa
+                            przejęła więzienie po Powstaniu Wielkopolskim, później w roku 1921 budynek trafił w ręce
+                            Ministerstwa Sprawiedliwości. Jednostka stała się więzieniem przy sądzie powiatowym, gdzie
+                            przebywali skazani z karami wymierzonymi do 6 miesięcy. Od 1 stycznia 1929 roku nadzór nad
+                            aresztem sprawował kierownik sądu grodzkiego. W czasie II Wojny Światowej budynek był
+                            miejscem represji wobec mieszkańców Śremu, których część została stracona 20 października
+                            1939 roku. Po zakończeniu działań wojennych jednostka znalazła się w dyspozycji Ministerstwa
+                            Bezpieczeństwa Publicznego jako więzienie karno-śledcze, a od 8 grudnia 1954
+                            przyporządkowano Ministerstwu Spraw Wewnętrznych. Po niespełna 2 latach kuratelę przejęło
+                            ponownie Ministerstwo Sprawiedliwości.
+                    </div>
+
+                    <div class="box-right">
+                        <img src="/dist/images/kraty_areszt.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+
+
+                    <div class="video-container box-left">
+                        <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                                src="https://player.vimeo.com/video/778600155?h=39eb235440&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                title="Areszt.mp4"></iframe>
+                        </div>
+                    </div>
+                    <div class="box-right text">
+                        <p>Budynek przez ponad 100 lat posiadał prostą architekturę ceglaną, lecz w końcówce ubiegłego
+                            wieku, podczas gruntownego remontu został podwyższony o kondygnację, jednocześnie tracąc
+                            swój zabytkowy charakter. Kolejne lata to również liczne modernizacje, tak, aby budynek
+                            spełniał wymogi na pobyt skazanych. Cele były wyposażone w ciepłą wodę oraz własne kąciki
+                            sanitarne, co wielokrotnie miało przełożenie na pozytywną opinię Sanepidu.
+                        </p>
+                        <p>W ostatnich latach więzienie funkcjonowało bardziej jako areszt śledczy, przebywający w nim
+                            skazani, wykonywali liczne, nieodpłatne prace na rzecz miasta. 31 marca 2018 Areszt Śledczy
+                            przestał istnieć po decyzji ministra Zbigniewa Ziobry.
+                        </p>
+                    </div>
+                </div>
+
+
             </div>
+
+            <h2>Galeria zdjęć</h2>
+            <!-- Galley wrapper that contains all items -->
+            <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                <!-- Use figure for a more semantic html -->
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="wide">
+                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                    <a href="/dist/images/areszt_srem.jpeg" data-width="4032" data-height="3024">
+                        <!-- Thumbnail -->
+                        <img src="/dist/images/areszt_srem.jpeg" itemprop="thumbnail" alt="Image description">
+                    </a>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                    <a href="/dist/images/areszt_srem2.jpg" data-width="1200" data-height="1600" itemprop="contentUrl">
+                        <!-- Thumbnail -->
+                        <img src="/dist/images/areszt_srem2.jpg" itemprop="thumbnail" alt="Image description">
+                    </a>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                    <a href="/dist/images/cele_w_areszcie.jpg" data-width="1200" data-height="1600"
+                        itemprop="contentUrl">
+                        <!-- Thumbnail -->
+                        <img src="/dist/images/cele_w_areszcie.jpg" itemprop="thumbnail" alt="Image description">
+                    </a>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                    <a href="/dist/images/cele_wiezienne.jpg" data-width="1200" data-height="1600"
+                        itemprop="contentUrl">
+                        <!-- Thumbnail -->
+                        <img src="/dist/images/cele_wiezienne.jpg" itemprop="thumbnail" alt="Image description">
+                    </a>
+                </figure>
+
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                    <a href="/dist/images/korytarz_areszt.jpg" data-width="1200" data-height="900"
+                        itemprop="contentUrl">
+                        <!-- Thumbnail -->
+                        <img src="/dist/images/korytarz_areszt.jpg" itemprop="thumbnail" alt="Image description">
+                    </a>
+                </figure>
+
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                    <a href="/dist/images/kraty.jpg" data-width="1200" data-height="1600" itemprop="contentUrl">
+                        <!-- Thumbnail -->
+                        <img src="/dist/images/kraty.jpg" itemprop="thumbnail" alt="Image description">
+                    </a>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                    <a href="/dist/images/o_areszcie.jpg" data-width="1200" data-height="1600" itemprop="contentUrl">
+                        <!-- Thumbnail -->
+                        <img src="/dist/images/o_areszcie.jpg" itemprop="thumbnail" alt="Image description">
+                    </a>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="wide">
+                    <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+                    <a href="/dist/images/drut_kolczasty.jpeg" data-width="4032" data-height="3024"
+                        itemprop="contentUrl">
+                        <!-- Thumbnail -->
+                        <img src="/dist/images/drut_kolczasty.jpeg" itemprop="thumbnail" alt="Image description">
+                    </a>
+                </figure>
+
+            </div>
+
+
+            <!-- Some spacing 😉 -->
+            <div class="spacer"></div>
+
+
+            <!-- Root element of PhotoSwipe. Must have class pswp. -->
+            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                <!-- Background of PhotoSwipe. 
+                       It's a separate element as animating opacity is faster than rgba(). -->
+                <div class="pswp__bg"></div>
+                <!-- Slides wrapper with overflow:hidden. -->
+                <div class="pswp__scroll-wrap">
+                    <!-- Container that holds slides. 
+                          PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                          Don't modify these 3 pswp__item elements, data is added later on. -->
+                    <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                    </div>
+                    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                    <div class="pswp__ui pswp__ui--hidden">
+                        <div class="pswp__top-bar">
+                            <!--  Controls are self-explanatory. Order can be changed. -->
+                            <div class="pswp__counter"></div>
+                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                            <button class="pswp__button pswp__button--share" title="Share"></button>
+                            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                            <!-- element will get class pswp__preloader--active when preloader is running -->
+                            <div class="pswp__preloader">
+                                <div class="pswp__preloader__icn">
+                                    <div class="pswp__preloader__cut">
+                                        <div class="pswp__preloader__donut"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                            <div class="pswp__share-tooltip"></div>
+                        </div>
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                        </button>
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                        </button>
+                        <div class="pswp__caption">
+                            <div class="pswp__caption__center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Import jQuery and PhotoSwipe Scripts -->
+
+
         </div>
 
+        <script src="js/libs/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
+        <script src="https://player.vimeo.com/api/player.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            'use strict';
+
+            /* global jQuery, PhotoSwipe, PhotoSwipeUI_Default, console */
+
+            (function ($) {
+
+                // Init empty gallery array
+                var container = [];
+
+                // Loop over gallery items and push it to the array
+                $('#gallery').find('figure').each(function () {
+                    var $link = $(this).find('a'),
+                        item = {
+                            src: $link.attr('href'),
+                            w: $link.data('width'),
+                            h: $link.data('height'),
+                            title: $link.data('caption')
+                        };
+                    container.push(item);
+                });
+
+                // Define click event on gallery item
+                $('a').click(function (event) {
+
+                    // Prevent location change
+                    event.preventDefault();
+
+                    // Define object and gallery options
+                    var $pswp = $('.pswp')[0],
+                        options = {
+                            index: $(this).parent('figure').index(),
+                            bgOpacity: 0.85,
+                            showHideOpacity: true
+                        };
+
+                    // Initialize PhotoSwipe
+                    var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
+                    gallery.init();
+                });
+
+            }(jQuery));
+        </script>
 </body>
 
 </html>
